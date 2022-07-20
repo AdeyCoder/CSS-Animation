@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.35s linear;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+section {
+    display: grid;
+    place-content: center;
+    background-color: #202020;
+    min-height: 100vh;
+}
+
+.container span {
+    display: inline-block;
+    margin-inline: 2px;
+    margin-block: 4rem;
+    height: 1rem;
+    width: 0.5rem;
+    background-color: white;
+    animation: dance 4s linear infinite;
+    animation-delay: calc(var(--i) * 0.25s);
+}
+
+@keyframes dance {
+
+    0%,
+    45% {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        height: 1rem;
+    }
+
+    15% {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        height: 4rem;
+    }
+
+    30% {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        height: 4rem;
+    }
+
+}
