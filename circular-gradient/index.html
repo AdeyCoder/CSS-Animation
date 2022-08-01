@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Loading animation</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <section>
+      <div class="loader"></div>
+    </section>
+
+    <script>
+      let max = 360;
+      let loader = document.querySelector(".loader");
+
+      for (let i = 0; i < max; i++) {
+        span = document.createElement("span");
+        span.style.setProperty("--i", i);
+
+        loader.append(span);
+      }
+
+      console.log(loader.children);
+    </script>
+  </body>
+</html>
